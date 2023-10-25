@@ -4,6 +4,10 @@
 
 #include "utils.h"
 
+#ifndef CLOCK_MONOTONIC_RAW
+#define CLOCK_MONOTONIC_RAW 4
+#endif
+
 /*  Retorna tempo em milisegundos desde EPOCH
 
     Forma de uso:
