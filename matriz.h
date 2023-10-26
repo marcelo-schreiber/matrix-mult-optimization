@@ -5,6 +5,8 @@
 
 #define DEF_SIZE 128
 #define BASE 32
+#define UF_FACTOR 32
+#define BK 16
 
 
 #define ABS(num)  ((num) < 0.0 ? -(num) : (num))
@@ -25,6 +27,9 @@ void liberaVetor (void *vet);
 
 void multMatVet (MatRow mat, Vetor v, int m, int n, Vetor res);
 void multMatMat(MatRow A, MatRow B, int n, MatRow C);
+
+void multMatVetOtimizada(MatRow mat, Vetor v, int n, Vetor res);
+void multMatMatOtimizada(MatRow A, MatRow B, int n, MatRow C);
 
 void prnMat (MatRow mat, int m, int n);
 void prnVetor (Vetor vet, int n);
