@@ -162,70 +162,40 @@ void multMatVetOtimizada(MatRow mat, Vetor v, int m, int n, Vetor res)
 
   for (int i = 0; i < m - m % UF_FACTOR; i += UF_FACTOR)
   {
-    for (int j = 0; j < n; ++j)
+    for (int j = 0; j < n; ++j) {
       res[i] = res[i] + mat[i * n + j] * v[j];
-    for (int j = 0; i < n; ++j)
       res[i + 1] = res[i + 1] + mat[(i + 1) * n + j] * v[j];
-    for (int j = 0; i < n; ++j)
       res[i + 2] = res[i + 2] + mat[(i + 2) * n + j] * v[j];
-    for (int j = 0; i < n; ++j)
       res[i + 3] = res[i + 3] + mat[(i + 3) * n + j] * v[j];
-    for (int j = 0; i < n; ++j)
       res[i + 4] = res[i + 4] + mat[(i + 4) * n + j] * v[j];
-    for (int j = 0; i < n; ++j)
       res[i + 5] = res[i + 5] + mat[(i + 5) * n + j] * v[j];
-    for (int j = 0; i < n; ++j)
       res[i + 6] = res[i + 6] + mat[(i + 6) * n + j] * v[j];
-    for (int j = 0; i < n; ++j)
       res[i + 7] = res[i + 7] + mat[(i + 7) * n + j] * v[j];
-    for (int j = 0; i < n; ++j)
       res[i + 8] = res[i + 8] + mat[(i + 8) * n + j] * v[j];
-    for (int j = 0; i < n; ++j)
       res[i + 9] = res[i + 9] + mat[(i + 9) * n + j] * v[j];
-    for (int j = 0; i < n; ++j)
       res[i + 10] = res[i + 10] + mat[(i + 10) * n + j] * v[j];
-    for (int j = 0; i < n; ++j)
       res[i + 11] = res[i + 11] + mat[(i + 11) * n + j] * v[j];
-    for (int j = 0; i < n; ++j)
       res[i + 12] = res[i + 12] + mat[(i + 12) * n + j] * v[j];
-    for (int j = 0; i < n; ++j)
       res[i + 13] = res[i + 13] + mat[(i + 13) * n + j] * v[j];
-    for (int j = 0; i < n; ++j)
       res[i + 14] = res[i + 14] + mat[(i + 14) * n + j] * v[j];
-    for (int j = 0; i < n; ++j)
       res[i + 15] = res[i + 15] + mat[(i + 15) * n + j] * v[j];
-    for (int j = 0; i < n; ++j)
       res[i + 16] = res[i + 16] + mat[(i + 16) * n + j] * v[j];
-    for (int j = 0; i < n; ++j)
       res[i + 17] = res[i + 17] + mat[(i + 17) * n + j] * v[j];
-    for (int j = 0; i < n; ++j)
       res[i + 18] = res[i + 18] + mat[(i + 18) * n + j] * v[j];
-    for (int j = 0; i < n; ++j)
       res[i + 19] = res[i + 19] + mat[(i + 19) * n + j] * v[j];
-    for (int j = 0; i < n; ++j)
       res[i + 20] = res[i + 20] + mat[(i + 20) * n + j] * v[j];
-    for (int j = 0; i < n; ++j)
       res[i + 21] = res[i + 21] + mat[(i + 21) * n + j] * v[j];
-    for (int j = 0; i < n; ++j)
       res[i + 22] = res[i + 22] + mat[(i + 22) * n + j] * v[j];
-    for (int j = 0; i < n; ++j)
       res[i + 23] = res[i + 23] + mat[(i + 23) * n + j] * v[j];
-    for (int j = 0; i < n; ++j)
       res[i + 24] = res[i + 24] + mat[(i + 24) * n + j] * v[j];
-    for (int j = 0; i < n; ++j)
       res[i + 25] = res[i + 25] + mat[(i + 25) * n + j] * v[j];
-    for (int j = 0; i < n; ++j)
       res[i + 26] = res[i + 26] + mat[(i + 26) * n + j] * v[j];
-    for (int j = 0; i < n; ++j)
       res[i + 27] = res[i + 27] + mat[(i + 27) * n + j] * v[j];
-    for (int j = 0; i < n; ++j)
       res[i + 28] = res[i + 28] + mat[(i + 28) * n + j] * v[j];
-    for (int j = 0; i < n; ++j)
       res[i + 29] = res[i + 29] + mat[(i + 29) * n + j] * v[j];
-    for (int j = 0; i < n; ++j)
       res[i + 30] = res[i + 30] + mat[(i + 30) * n + j] * v[j];
-    for (int j = 0; i < n; ++j)
       res[i + 31] = res[i + 31] + mat[(i + 31) * n + j] * v[j];
+    }
   }
 
   for (int i = n - n % UF_FACTOR; i < n; ++i)
