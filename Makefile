@@ -20,8 +20,8 @@ CC_FLAGS=-c         \
          -Wall      \
 
  LIKWID_FLAGS=-DLIKWID_PERFMON \
- 						 -I{LIKWID_INCLUDE} \
- 						 -L{LIKWID_LIB} \
+ 						 -I${LIKWID_INCLUDE} \
+ 						 -L${LIKWID_LIB} \
 
 
 #
