@@ -44,7 +44,7 @@ run_likwid_perfctr() {
 metrics=("MEM" "L2CACHE" "ENERGY" "FLOPS_DP")
 
 # Tamanhos N
-sizes=(64 100) #! 128 200 256 512 600 900 1024 2000 2048 3000 4000)
+sizes=(64 100 128 200 256 512 600 900 1024 2000 2048 3000 4000)
 
 rm -f *.csv
 
