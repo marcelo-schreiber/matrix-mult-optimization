@@ -6,7 +6,7 @@
 #define DEF_SIZE 128
 #define BASE 32
 #define UF_FACTOR 8
-#define BK 8
+#define BK 16
 
 #define ABS(num) ((num) < 0.0 ? -(num) : (num))
 

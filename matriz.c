@@ -183,21 +183,20 @@ void multMatVetOtimizada(MatRow mat, Vetor v, int m, int n, Vetor res)
 void multMatMatOtimizada(MatRow A, MatRow B, int n, MatRow C)
 {
   int istart = 0, iend = 0, jstart = 0, jend = 0, kstart = 0, kend = 0;
-  int b = UF_FACTOR << 1;
-  // ja que b = 16, n % b = 0, n / b = n >> 4
+  // ja que BK = 16, n % BK = 0, n / BK = n >> 4
   
   for (int ii = 0; ii < n >> 4; ++ii)
   {
-    istart = ii * b;
-    iend = istart + b;
+    istart = ii * BK;
+    iend = istart + BK;
     for (int jj = 0; jj < n >> 4; ++jj)
     {
-      jstart = jj * b;
-      jend = jstart + b;
+      jstart = jj * BK;
+      jend = jstart + BK;
       for (int kk = 0; kk < n >> 4; ++kk)
       {
-        kstart = kk * b;
-        kend = kstart + b;
+        kstart = kk * BK;
+        kend = kstart + BK;
 
         for (register int i = istart; i < iend; ++i)
         {
