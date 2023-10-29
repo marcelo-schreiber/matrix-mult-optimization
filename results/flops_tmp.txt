@@ -1,0 +1,127 @@
+--------------------------------------------------------------------------------
+CPU name:	AMD Ryzen 5 3500U with Radeon Vega Mobile Gfx  
+CPU type:	AMD K17 (Zen+) architecture
+CPU clock:	2.10 GHz
+--------------------------------------------------------------------------------
+tempo matvet sem otimizacao: 14.795204
+tempo matmat sem otimizacao: 315021.258876
+tempo matvet com otimizacao: 10.627429
+tempo matmat com otimizacao: 40441.330821
+tempo matmat sem otimização: 315034.975353
+--------------------------------------------------------------------------------
+Region mult-matvet-sem-otimizacao, Group 1: FLOPS_DP
++-------------------+------------+
+|    Region Info    | HWThread 7 |
++-------------------+------------+
+| RDTSC Runtime [s] |   0.014797 |
+|     call count    |          1 |
++-------------------+------------+
+
++----------------------------------+---------+------------+
+|               Event              | Counter | HWThread 7 |
++----------------------------------+---------+------------+
+|         ACTUAL_CPU_CLOCK         |  FIXC1  |   55082250 |
+|           MAX_CPU_CLOCK          |  FIXC2  |   31395690 |
+|       RETIRED_INSTRUCTIONS       |   PMC0  |  112034800 |
+|        CPU_CLOCKS_UNHALTED       |   PMC1  |   52959540 |
+| RETIRED_SSE_AVX_FLOPS_DOUBLE_ALL |   PMC2  |   32000010 |
+|               MERGE              |   PMC3  |          0 |
++----------------------------------+---------+------------+
+
++----------------------+------------+
+|        Metric        | HWThread 7 |
++----------------------+------------+
+|  Runtime (RDTSC) [s] |     0.0148 |
+| Runtime unhalted [s] |     0.0263 |
+|      Clock [MHz]     |  3677.4297 |
+|          CPI         |     0.4727 |
+|     DP [MFLOP/s]     |  2162.5983 |
++----------------------+------------+
+
+Region mult-matmat-sem-otimizacao, Group 1: FLOPS_DP
++-------------------+------------+
+|    Region Info    | HWThread 7 |
++-------------------+------------+
+| RDTSC Runtime [s] | 315.020400 |
+|     call count    |          1 |
++-------------------+------------+
+
++----------------------------------+---------+---------------+
+|               Event              | Counter |   HWThread 7  |
++----------------------------------+---------+---------------+
+|         ACTUAL_CPU_CLOCK         |  FIXC1  | 1137925000000 |
+|           MAX_CPU_CLOCK          |  FIXC2  |  660300900000 |
+|       RETIRED_INSTRUCTIONS       |   PMC0  |  512176200000 |
+|        CPU_CLOCKS_UNHALTED       |   PMC1  | 1132004000000 |
+| RETIRED_SSE_AVX_FLOPS_DOUBLE_ALL |   PMC2  |  128000000000 |
+|               MERGE              |   PMC3  |             0 |
++----------------------------------+---------+---------------+
+
++----------------------+------------+
+|        Metric        | HWThread 7 |
++----------------------+------------+
+|  Runtime (RDTSC) [s] |   315.0204 |
+| Runtime unhalted [s] |   542.8888 |
+|      Clock [MHz]     |  3612.2225 |
+|          CPI         |     2.2102 |
+|     DP [MFLOP/s]     |   406.3229 |
++----------------------+------------+
+
+Region mult-matvet-com-otimizacao, Group 1: FLOPS_DP
++-------------------+------------+
+|    Region Info    | HWThread 7 |
++-------------------+------------+
+| RDTSC Runtime [s] |   0.010628 |
+|     call count    |          1 |
++-------------------+------------+
+
++----------------------------------+---------+------------+
+|               Event              | Counter | HWThread 7 |
++----------------------------------+---------+------------+
+|         ACTUAL_CPU_CLOCK         |  FIXC1  |   38736280 |
+|           MAX_CPU_CLOCK          |  FIXC2  |   22688950 |
+|       RETIRED_INSTRUCTIONS       |   PMC0  |   72021890 |
+|        CPU_CLOCKS_UNHALTED       |   PMC1  |   37743460 |
+| RETIRED_SSE_AVX_FLOPS_DOUBLE_ALL |   PMC2  |         13 |
+|               MERGE              |   PMC3  |          0 |
++----------------------------------+---------+------------+
+
++----------------------+------------+
+|        Metric        | HWThread 7 |
++----------------------+------------+
+|  Runtime (RDTSC) [s] |     0.0106 |
+| Runtime unhalted [s] |     0.0185 |
+|      Clock [MHz]     |  3578.5431 |
+|          CPI         |     0.5241 |
+|     DP [MFLOP/s]     |     0.0012 |
++----------------------+------------+
+
+Region mult-matmat-com-otimizacao, Group 1: FLOPS_DP
++-------------------+------------+
+|    Region Info    | HWThread 7 |
++-------------------+------------+
+| RDTSC Runtime [s] |  40.441220 |
+|     call count    |          1 |
++-------------------+------------+
+
++----------------------------------+---------+--------------+
+|               Event              | Counter |  HWThread 7  |
++----------------------------------+---------+--------------+
+|         ACTUAL_CPU_CLOCK         |  FIXC1  | 144569800000 |
+|           MAX_CPU_CLOCK          |  FIXC2  |  84767510000 |
+|       RETIRED_INSTRUCTIONS       |   PMC0  | 293907000000 |
+|        CPU_CLOCKS_UNHALTED       |   PMC1  | 143497000000 |
+| RETIRED_SSE_AVX_FLOPS_DOUBLE_ALL |   PMC2  |           13 |
+|               MERGE              |   PMC3  |            0 |
++----------------------------------+---------+--------------+
+
++----------------------+--------------+
+|        Metric        |  HWThread 7  |
++----------------------+--------------+
+|  Runtime (RDTSC) [s] |      40.4412 |
+| Runtime unhalted [s] |      68.9723 |
+|      Clock [MHz]     |    3574.7930 |
+|          CPI         |       0.4882 |
+|     DP [MFLOP/s]     | 3.214542e-07 |
++----------------------+--------------+
+

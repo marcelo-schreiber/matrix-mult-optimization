@@ -162,7 +162,8 @@ void multMatVetOtimizada(MatRow mat, Vetor v, int m, int n, Vetor res)
 
   for (int i = 0; i < m - m % UF_FACTOR; i += UF_FACTOR)
   {
-    for (int j = 0; j < n; ++j) {
+    for (int j = 0; j < n; ++j)
+    {
       res[i] = res[i] + mat[i * n + j] * v[j];
       res[i + 1] = res[i + 1] + mat[(i + 1) * n + j] * v[j];
       res[i + 2] = res[i + 2] + mat[(i + 2) * n + j] * v[j];
@@ -181,30 +182,41 @@ void multMatVetOtimizada(MatRow mat, Vetor v, int m, int n, Vetor res)
 
 void multMatMatOtimizada(MatRow A, MatRow B, int n, MatRow C)
 {
-
-  for (int i = 0; i < n; ++i)
+  int istart = 0, iend = 0, jstart = 0, jend = 0, kstart = 0, kend = 0;
+  int b = UF_FACTOR << 1;
+  // ja que b = 16, n % b = 0, n / b = n >> 4
+  
+  for (int ii = 0; ii < n >> 4; ++ii)
   {
-    for (int j = 0; j < n - n % BK; j += BK)
+    istart = ii * b;
+    iend = istart + b;
+    for (int jj = 0; jj < n >> 4; ++jj)
     {
-      C[i * n + j] = C[i * n + (j + 1)] = C[i * n + (j + 2)] = C[i * n + (j + 3)] = C[i * n + (j + 4)] = C[i * n + (j + 5)] = C[i * n + (j + 6)] = C[i * n + (j + 7)] = 0;
-      for (int k = 0; k < n; ++k)
+      jstart = jj * b;
+      jend = jstart + b;
+      for (int kk = 0; kk < n >> 4; ++kk)
       {
-        C[i * n + j] += A[i * n + k] * B[k * n + j];
-        C[i * n + (j + 1)] += A[i * n + k] * B[k * n + (j + 1)];
-        C[i * n + (j + 2)] += A[i * n + k] * B[k * n + (j + 2)];
-        C[i * n + (j + 3)] += A[i * n + k] * B[k * n + (j + 3)];
-        C[i * n + (j + 4)] += A[i * n + k] * B[k * n + (j + 4)];
-        C[i * n + (j + 5)] += A[i * n + k] * B[k * n + (j + 5)];
-        C[i * n + (j + 6)] += A[i * n + k] * B[k * n + (j + 6)];
-        C[i * n + (j + 7)] += A[i * n + k] * B[k * n + (j + 7)];
-      }
-    }
+        kstart = kk * b;
+        kend = kstart + b;
 
-    for (int j = n - n % BK; j < n; ++j)
-    {
-      C[i * n + j] = 0;
-      for (int k = 0; k < n; ++k)
-        C[i * n + j] += A[i * n + k] * B[k * n + j];
+        for (register int i = istart; i < iend; ++i)
+        {
+          for (register int j = jstart; j < jend; j += UF_FACTOR)
+          {
+            for (register int k = kstart; k < kend; ++k)
+            {
+              C[i * n + j] += A[i * n + k] * B[k * n + j];
+              C[i * n + (j + 1)] += A[i * n + k] * B[k * n + (j + 1)];
+              C[i * n + (j + 2)] += A[i * n + k] * B[k * n + (j + 2)];
+              C[i * n + (j + 3)] += A[i * n + k] * B[k * n + (j + 3)];
+              C[i * n + (j + 4)] += A[i * n + k] * B[k * n + (j + 4)];
+              C[i * n + (j + 5)] += A[i * n + k] * B[k * n + (j + 5)];
+              C[i * n + (j + 6)] += A[i * n + k] * B[k * n + (j + 6)];
+              C[i * n + (j + 7)] += A[i * n + k] * B[k * n + (j + 7)];
+            }
+          }
+        }
+      }
     }
   }
 }

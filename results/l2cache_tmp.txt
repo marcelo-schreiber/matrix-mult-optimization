@@ -1,0 +1,143 @@
+--------------------------------------------------------------------------------
+CPU name:	AMD Ryzen 5 3500U with Radeon Vega Mobile Gfx  
+CPU type:	AMD K17 (Zen+) architecture
+CPU clock:	2.10 GHz
+--------------------------------------------------------------------------------
+tempo matvet sem otimizacao: 14.676050
+tempo matmat sem otimizacao: 314578.048791
+tempo matvet com otimizacao: 10.487476
+tempo matmat com otimizacao: 40497.803126
+tempo matmat sem otimização: 314665.257129
+--------------------------------------------------------------------------------
+Region mult-matvet-sem-otimizacao, Group 1: CACHE
++-------------------+------------+
+|    Region Info    | HWThread 7 |
++-------------------+------------+
+| RDTSC Runtime [s] |   0.014678 |
+|     call count    |          1 |
++-------------------+------------+
+
++------------------------+---------+------------+
+|          Event         | Counter | HWThread 7 |
++------------------------+---------+------------+
+|    ACTUAL_CPU_CLOCK    |  FIXC1  |   54842940 |
+|      MAX_CPU_CLOCK     |  FIXC2  |   31147350 |
+|  RETIRED_INSTRUCTIONS  |   PMC0  |  112034800 |
+|   CPU_CLOCKS_UNHALTED  |   PMC1  |   52852410 |
+|   DATA_CACHE_ACCESSES  |   PMC2  |   48079360 |
+| DATA_CACHE_REFILLS_ALL |   PMC3  |      31396 |
++------------------------+---------+------------+
+
++-------------------------+------------+
+|          Metric         | HWThread 7 |
++-------------------------+------------+
+|   Runtime (RDTSC) [s]   |     0.0147 |
+|   Runtime unhalted [s]  |     0.0262 |
+|       Clock [MHz]       |  3689.3853 |
+|           CPI           |     0.4717 |
+|   data cache requests   |   48079360 |
+| data cache request rate |     0.4291 |
+|    data cache misses    |      31396 |
+|   data cache miss rate  |     0.0003 |
+|  data cache miss ratio  |     0.0007 |
++-------------------------+------------+
+
+Region mult-matmat-sem-otimizacao, Group 1: CACHE
++-------------------+------------+
+|    Region Info    | HWThread 7 |
++-------------------+------------+
+| RDTSC Runtime [s] | 314.576700 |
+|     call count    |          1 |
++-------------------+------------+
+
++------------------------+---------+---------------+
+|          Event         | Counter |   HWThread 7  |
++------------------------+---------+---------------+
+|    ACTUAL_CPU_CLOCK    |  FIXC1  | 1136457000000 |
+|      MAX_CPU_CLOCK     |  FIXC2  |  659371800000 |
+|  RETIRED_INSTRUCTIONS  |   PMC0  |  512176200000 |
+|   CPU_CLOCKS_UNHALTED  |   PMC1  | 1130480000000 |
+|   DATA_CACHE_ACCESSES  |   PMC2  |  258010700000 |
+| DATA_CACHE_REFILLS_ALL |   PMC3  |   65075020000 |
++------------------------+---------+---------------+
+
++-------------------------+--------------+
+|          Metric         |  HWThread 7  |
++-------------------------+--------------+
+|   Runtime (RDTSC) [s]   |     314.5767 |
+|   Runtime unhalted [s]  |     542.3737 |
+|       Clock [MHz]       |    3611.4120 |
+|           CPI           |       2.2072 |
+|   data cache requests   | 258010700000 |
+| data cache request rate |       0.5038 |
+|    data cache misses    |  65075020000 |
+|   data cache miss rate  |       0.1271 |
+|  data cache miss ratio  |       0.2522 |
++-------------------------+--------------+
+
+Region mult-matvet-com-otimizacao, Group 1: CACHE
++-------------------+------------+
+|    Region Info    | HWThread 7 |
++-------------------+------------+
+| RDTSC Runtime [s] |   0.010488 |
+|     call count    |          1 |
++-------------------+------------+
+
++------------------------+---------+------------+
+|          Event         | Counter | HWThread 7 |
++------------------------+---------+------------+
+|    ACTUAL_CPU_CLOCK    |  FIXC1  |   38340040 |
+|      MAX_CPU_CLOCK     |  FIXC2  |   22427290 |
+|  RETIRED_INSTRUCTIONS  |   PMC0  |   72021900 |
+|   CPU_CLOCKS_UNHALTED  |   PMC1  |   37392330 |
+|   DATA_CACHE_ACCESSES  |   PMC2  |   64200170 |
+| DATA_CACHE_REFILLS_ALL |   PMC3  |      26993 |
++------------------------+---------+------------+
+
++-------------------------+------------+
+|          Metric         | HWThread 7 |
++-------------------------+------------+
+|   Runtime (RDTSC) [s]   |     0.0105 |
+|   Runtime unhalted [s]  |     0.0183 |
+|       Clock [MHz]       |  3582.0377 |
+|           CPI           |     0.5192 |
+|   data cache requests   |   64200170 |
+| data cache request rate |     0.8914 |
+|    data cache misses    |      26993 |
+|   data cache miss rate  |     0.0004 |
+|  data cache miss ratio  |     0.0004 |
++-------------------------+------------+
+
+Region mult-matmat-com-otimizacao, Group 1: CACHE
++-------------------+------------+
+|    Region Info    | HWThread 7 |
++-------------------+------------+
+| RDTSC Runtime [s] |  40.497630 |
+|     call count    |          1 |
++-------------------+------------+
+
++------------------------+---------+--------------+
+|          Event         | Counter |  HWThread 7  |
++------------------------+---------+--------------+
+|    ACTUAL_CPU_CLOCK    |  FIXC1  | 144869300000 |
+|      MAX_CPU_CLOCK     |  FIXC2  |  84885860000 |
+|  RETIRED_INSTRUCTIONS  |   PMC0  | 293907000000 |
+|   CPU_CLOCKS_UNHALTED  |   PMC1  | 143784400000 |
+|   DATA_CACHE_ACCESSES  |   PMC2  | 256426800000 |
+| DATA_CACHE_REFILLS_ALL |   PMC3  |    668704400 |
++------------------------+---------+--------------+
+
++-------------------------+--------------+
+|          Metric         |  HWThread 7  |
++-------------------------+--------------+
+|   Runtime (RDTSC) [s]   |      40.4976 |
+|   Runtime unhalted [s]  |      69.1388 |
+|       Clock [MHz]       |    3575.9826 |
+|           CPI           |       0.4892 |
+|   data cache requests   | 256426800000 |
+| data cache request rate |       0.8725 |
+|    data cache misses    |    668704400 |
+|   data cache miss rate  |       0.0023 |
+|  data cache miss ratio  |       0.0026 |
++-------------------------+--------------+
+

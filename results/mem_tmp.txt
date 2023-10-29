@@ -1,0 +1,131 @@
+--------------------------------------------------------------------------------
+CPU name:	AMD Ryzen 5 3500U with Radeon Vega Mobile Gfx  
+CPU type:	AMD K17 (Zen+) architecture
+CPU clock:	2.10 GHz
+--------------------------------------------------------------------------------
+tempo matvet sem otimizacao: 14.699625
+tempo matmat sem otimizacao: 315324.562403
+tempo matvet com otimizacao: 10.551867
+tempo matmat com otimizacao: 40359.300988
+tempo matmat sem otimização: 315278.524234
+--------------------------------------------------------------------------------
+Region mult-matvet-sem-otimizacao, Group 1: MEM
++-------------------+------------+
+|    Region Info    | HWThread 7 |
++-------------------+------------+
+| RDTSC Runtime [s] |   0.014701 |
+|     call count    |          1 |
++-------------------+------------+
+
++----------------------+---------+------------+
+|         Event        | Counter | HWThread 7 |
++----------------------+---------+------------+
+|   ACTUAL_CPU_CLOCK   |  FIXC1  |   54928490 |
+|     MAX_CPU_CLOCK    |  FIXC2  |   31194930 |
+| RETIRED_INSTRUCTIONS |   PMC0  |  112034800 |
+|  CPU_CLOCKS_UNHALTED |   PMC1  |   52791700 |
+|    DRAM_CHANNEL_0    |   DFC0  |          0 |
+|    DRAM_CHANNEL_1    |   DFC1  |    2078331 |
++----------------------+---------+------------+
+
++-----------------------------+------------+
+|            Metric           | HWThread 7 |
++-----------------------------+------------+
+|     Runtime (RDTSC) [s]     |     0.0147 |
+|     Runtime unhalted [s]    |     0.0262 |
+|         Clock [MHz]         |  3690.7744 |
+|             CPI             |     0.4712 |
+| Memory bandwidth [MBytes/s] |  9047.6789 |
+| Memory data volume [GBytes] |     0.1330 |
++-----------------------------+------------+
+
+Region mult-matmat-sem-otimizacao, Group 1: MEM
++-------------------+------------+
+|    Region Info    | HWThread 7 |
++-------------------+------------+
+| RDTSC Runtime [s] | 315.322900 |
+|     call count    |          1 |
++-------------------+------------+
+
++----------------------+---------+---------------+
+|         Event        | Counter |   HWThread 7  |
++----------------------+---------+---------------+
+|   ACTUAL_CPU_CLOCK   |  FIXC1  | 1139413000000 |
+|     MAX_CPU_CLOCK    |  FIXC2  |  660936600000 |
+| RETIRED_INSTRUCTIONS |   PMC0  |  512176200000 |
+|  CPU_CLOCKS_UNHALTED |   PMC1  | 1133443000000 |
+|    DRAM_CHANNEL_0    |   DFC0  |             0 |
+|    DRAM_CHANNEL_1    |   DFC1  |    9201590000 |
++----------------------+---------+---------------+
+
++-----------------------------+------------+
+|            Metric           | HWThread 7 |
++-----------------------------+------------+
+|     Runtime (RDTSC) [s]     |   315.3229 |
+|     Runtime unhalted [s]    |   543.5973 |
+|         Clock [MHz]         |  3613.4764 |
+|             CPI             |     2.2130 |
+| Memory bandwidth [MBytes/s] |  1867.6149 |
+| Memory data volume [GBytes] |   588.9018 |
++-----------------------------+------------+
+
+Region mult-matvet-com-otimizacao, Group 1: MEM
++-------------------+------------+
+|    Region Info    | HWThread 7 |
++-------------------+------------+
+| RDTSC Runtime [s] |   0.010552 |
+|     call count    |          1 |
++-------------------+------------+
+
++----------------------+---------+------------+
+|         Event        | Counter | HWThread 7 |
++----------------------+---------+------------+
+|   ACTUAL_CPU_CLOCK   |  FIXC1  |   38520730 |
+|     MAX_CPU_CLOCK    |  FIXC2  |   22515780 |
+| RETIRED_INSTRUCTIONS |   PMC0  |   72021900 |
+|  CPU_CLOCKS_UNHALTED |   PMC1  |   37560750 |
+|    DRAM_CHANNEL_0    |   DFC0  |          0 |
+|    DRAM_CHANNEL_1    |   DFC1  |    2043676 |
++----------------------+---------+------------+
+
++-----------------------------+------------+
+|            Metric           | HWThread 7 |
++-----------------------------+------------+
+|     Runtime (RDTSC) [s]     |     0.0106 |
+|     Runtime unhalted [s]    |     0.0184 |
+|         Clock [MHz]         |  3586.0090 |
+|             CPI             |     0.5215 |
+| Memory bandwidth [MBytes/s] | 12394.8004 |
+| Memory data volume [GBytes] |     0.1308 |
++-----------------------------+------------+
+
+Region mult-matmat-com-otimizacao, Group 1: MEM
++-------------------+------------+
+|    Region Info    | HWThread 7 |
++-------------------+------------+
+| RDTSC Runtime [s] |  40.359090 |
+|     call count    |          1 |
++-------------------+------------+
+
++----------------------+---------+--------------+
+|         Event        | Counter |  HWThread 7  |
++----------------------+---------+--------------+
+|   ACTUAL_CPU_CLOCK   |  FIXC1  | 144525200000 |
+|     MAX_CPU_CLOCK    |  FIXC2  |  84595630000 |
+| RETIRED_INSTRUCTIONS |   PMC0  | 293907000000 |
+|  CPU_CLOCKS_UNHALTED |   PMC1  | 143473700000 |
+|    DRAM_CHANNEL_0    |   DFC0  |            0 |
+|    DRAM_CHANNEL_1    |   DFC1  |    752882300 |
++----------------------+---------+--------------+
+
++-----------------------------+------------+
+|            Metric           | HWThread 7 |
++-----------------------------+------------+
+|     Runtime (RDTSC) [s]     |    40.3591 |
+|     Runtime unhalted [s]    |    68.9509 |
+|         Clock [MHz]         |  3580.9603 |
+|             CPI             |     0.4882 |
+| Memory bandwidth [MBytes/s] |  1193.8938 |
+| Memory data volume [GBytes] |    48.1845 |
++-----------------------------+------------+
+

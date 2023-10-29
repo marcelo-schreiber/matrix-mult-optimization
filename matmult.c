@@ -77,48 +77,54 @@ int main (int argc, char *argv[])
 
   LIKWID_MARKER_INIT;
   
-  double t_gen = timestamp();
-
   LIKWID_MARKER_START("mult-matvet-sem-otimizacao");
+
+  double t_gen = timestamp();
   multMatVet(mRow_3, vet2, n, n, res2);
-  LIKWID_MARKER_STOP("mult-matvet-sem-otimizacao");
-  
   t_gen = timestamp() - t_gen;
+
+  LIKWID_MARKER_STOP("mult-matvet-sem-otimizacao");
   
   printf("tempo matvet sem otimizacao: %f\n", t_gen);  
 
-  t_gen = timestamp();
-  
   LIKWID_MARKER_START("mult-matmat-sem-otimizacao");
+
+  t_gen = timestamp();
   multMatMat(mRow_3, mRow_4, n, resMat2);
-  LIKWID_MARKER_STOP("mult-matmat-sem-otimizacao");
-  
   t_gen = timestamp() - t_gen;
+
+  LIKWID_MARKER_STOP("mult-matmat-sem-otimizacao");
 
   printf("tempo matmat sem otimizacao: %f\n", t_gen);
   
-  t_gen = timestamp();
 
   LIKWID_MARKER_START("mult-matvet-com-otimizacao");
-  multMatVetOtimizada (mRow_1, vet, n, n, res);
-  LIKWID_MARKER_STOP("mult-matvet-com-otimizacao");
 
+  t_gen = timestamp();
+  multMatVetOtimizada (mRow_1, vet, n, n, res);
   t_gen = timestamp() - t_gen;
+
+  LIKWID_MARKER_STOP("mult-matvet-com-otimizacao");
 
   printf("tempo matvet com otimizacao: %f\n", t_gen);
   
-  t_gen = timestamp();
 
   LIKWID_MARKER_START("mult-matmat-com-otimizacao");  
+  t_gen = timestamp();
   multMatMatOtimizada (mRow_1, mRow_2, n, resMat);
-  LIKWID_MARKER_STOP("mult-matmat-com-otimizacao");
-
   t_gen = timestamp() - t_gen;
+  LIKWID_MARKER_STOP("mult-matmat-com-otimizacao");
 
   printf("tempo matmat com otimizacao: %f\n", t_gen);
 
   LIKWID_MARKER_CLOSE;
-    
+
+  t_gen = timestamp();
+  multMatMat (mRow_3, mRow_4, n, resMat2);
+  t_gen = timestamp() - t_gen;
+
+  printf("tempo matmat sem otimização: %f\n", t_gen);
+
   liberaVetor ((void*) mRow_1);
   liberaVetor ((void*) mRow_2);
   liberaVetor ((void*) mRow_3);

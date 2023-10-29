@@ -1,0 +1,139 @@
+--------------------------------------------------------------------------------
+CPU name:	AMD Ryzen 5 3500U with Radeon Vega Mobile Gfx  
+CPU type:	AMD K17 (Zen+) architecture
+CPU clock:	2.09 GHz
+--------------------------------------------------------------------------------
+tempo matvet sem otimizacao: 14.807868
+tempo matmat sem otimizacao: 314758.693416
+tempo matvet com otimizacao: 10.586191
+tempo matmat com otimizacao: 40670.980341
+tempo matmat sem otimização: 314681.689001
+--------------------------------------------------------------------------------
+Region mult-matvet-sem-otimizacao, Group 1: ENERGY
++-------------------+------------+
+|    Region Info    | HWThread 7 |
++-------------------+------------+
+| RDTSC Runtime [s] |   0.014810 |
+|     call count    |          1 |
++-------------------+------------+
+
++----------------------+---------+------------+
+|         Event        | Counter | HWThread 7 |
++----------------------+---------+------------+
+|   ACTUAL_CPU_CLOCK   |  FIXC1  |   54671670 |
+|     MAX_CPU_CLOCK    |  FIXC2  |   31388870 |
+| RETIRED_INSTRUCTIONS |   PMC0  |  112036000 |
+|  CPU_CLOCKS_UNHALTED |   PMC1  |   53777180 |
+|   RAPL_CORE_ENERGY   |   PWR0  |     0.1240 |
+|    RAPL_PKG_ENERGY   |   PWR1  |     0.2969 |
++----------------------+---------+------------+
+
++----------------------+------------+
+|        Metric        | HWThread 7 |
++----------------------+------------+
+|  Runtime (RDTSC) [s] |     0.0148 |
+| Runtime unhalted [s] |     0.0261 |
+|      Clock [MHz]     |  3646.7891 |
+|          CPI         |     0.4800 |
+|    Energy Core [J]   |     0.1240 |
+|    Power Core [W]    |     8.3734 |
+|    Energy PKG [J]    |     0.2969 |
+|     Power PKG [W]    |    20.0470 |
++----------------------+------------+
+
+Region mult-matmat-sem-otimizacao, Group 1: ENERGY
++-------------------+------------+
+|    Region Info    | HWThread 7 |
++-------------------+------------+
+| RDTSC Runtime [s] | 314.757100 |
+|     call count    |          1 |
++-------------------+------------+
+
++----------------------+---------+---------------+
+|         Event        | Counter |   HWThread 7  |
++----------------------+---------+---------------+
+|   ACTUAL_CPU_CLOCK   |  FIXC1  | 1137354000000 |
+|     MAX_CPU_CLOCK    |  FIXC2  |  659750200000 |
+| RETIRED_INSTRUCTIONS |   PMC0  |  512176200000 |
+|  CPU_CLOCKS_UNHALTED |   PMC1  | 1131397000000 |
+|   RAPL_CORE_ENERGY   |   PWR0  |     1696.6040 |
+|    RAPL_PKG_ENERGY   |   PWR1  |     4731.8310 |
++----------------------+---------+---------------+
+
++----------------------+------------+
+|        Metric        | HWThread 7 |
++----------------------+------------+
+|  Runtime (RDTSC) [s] |   314.7571 |
+| Runtime unhalted [s] |   543.2149 |
+|      Clock [MHz]     |  3609.4424 |
+|          CPI         |     2.2090 |
+|    Energy Core [J]   |  1696.6040 |
+|    Power Core [W]    |     5.3902 |
+|    Energy PKG [J]    |  4731.8310 |
+|     Power PKG [W]    |    15.0333 |
++----------------------+------------+
+
+Region mult-matvet-com-otimizacao, Group 1: ENERGY
++-------------------+------------+
+|    Region Info    | HWThread 7 |
++-------------------+------------+
+| RDTSC Runtime [s] |   0.010587 |
+|     call count    |          1 |
++-------------------+------------+
+
++----------------------+---------+------------+
+|         Event        | Counter | HWThread 7 |
++----------------------+---------+------------+
+|   ACTUAL_CPU_CLOCK   |  FIXC1  |   38660860 |
+|     MAX_CPU_CLOCK    |  FIXC2  |   22597010 |
+| RETIRED_INSTRUCTIONS |   PMC0  |   72021840 |
+|  CPU_CLOCKS_UNHALTED |   PMC1  |   37682150 |
+|   RAPL_CORE_ENERGY   |   PWR0  |     0.0837 |
+|    RAPL_PKG_ENERGY   |   PWR1  |     0.1838 |
++----------------------+---------+------------+
+
++----------------------+------------+
+|        Metric        | HWThread 7 |
++----------------------+------------+
+|  Runtime (RDTSC) [s] |     0.0106 |
+| Runtime unhalted [s] |     0.0185 |
+|      Clock [MHz]     |  3582.1563 |
+|          CPI         |     0.5232 |
+|    Energy Core [J]   |     0.0837 |
+|    Power Core [W]    |     7.9098 |
+|    Energy PKG [J]    |     0.1838 |
+|     Power PKG [W]    |    17.3589 |
++----------------------+------------+
+
+Region mult-matmat-com-otimizacao, Group 1: ENERGY
++-------------------+------------+
+|    Region Info    | HWThread 7 |
++-------------------+------------+
+| RDTSC Runtime [s] |  40.670770 |
+|     call count    |          1 |
++-------------------+------------+
+
++----------------------+---------+--------------+
+|         Event        | Counter |  HWThread 7  |
++----------------------+---------+--------------+
+|   ACTUAL_CPU_CLOCK   |  FIXC1  | 145776900000 |
+|     MAX_CPU_CLOCK    |  FIXC2  |  85248870000 |
+| RETIRED_INSTRUCTIONS |   PMC0  | 293907000000 |
+|  CPU_CLOCKS_UNHALTED |   PMC1  | 144712300000 |
+|   RAPL_CORE_ENERGY   |   PWR0  |     310.8776 |
+|    RAPL_PKG_ENERGY   |   PWR1  |     608.6497 |
++----------------------+---------+--------------+
+
++----------------------+------------+
+|        Metric        | HWThread 7 |
++----------------------+------------+
+|  Runtime (RDTSC) [s] |    40.6708 |
+| Runtime unhalted [s] |    69.6249 |
+|      Clock [MHz]     |  3580.3384 |
+|          CPI         |     0.4924 |
+|    Energy Core [J]   |   310.8776 |
+|    Power Core [W]    |     7.6438 |
+|    Energy PKG [J]    |   608.6497 |
+|     Power PKG [W]    |    14.9653 |
++----------------------+------------+
+
